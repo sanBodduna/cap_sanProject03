@@ -1,5 +1,6 @@
 using my.salesorder as my from '../db/data-model.cds'; // or '../db/order-data-model';
 // added this comment to see in GIT auto released or not
+// 2nd comment to push to git via webhook
 service CatalogService @(path:'/catalog', requires:'authenticated-user') 
 {
     @(restrict:[
