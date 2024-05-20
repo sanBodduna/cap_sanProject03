@@ -1,0 +1,47 @@
+{
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.SalesOrderViewer",
+      "description": "SalesOrderViewer"
+    },
+    {
+      "name": "$XSAPPNAME.SalesOrderAdmin",
+      "description": "SalesOrderAdmin"
+    }
+  ],
+  "attributes": [
+    {
+      "name": "SalesOrgAttribute",
+      "description": "SalesOrgAttribute",
+      "valueType": "s",
+      "valueRequired": false
+    }
+  ],
+  "role-templates": [
+    {
+      "name": "SalesOrderViewer",
+      "description": "generated",
+      "scope-references": [
+        "$XSAPPNAME.SalesOrderViewer"
+      ],
+      "attribute-references": []
+    },
+    {
+      "name": "SalesOrderAdmin",
+      "description": "generated",
+      "scope-references": [
+        "$XSAPPNAME.SalesOrderAdmin"
+      ],
+      "attribute-references": []
+    },
+    {
+      "name": "userattributes",
+      "description": "generated",
+      "default-role-name": "Attributes of a User",
+      "scope-references": [],
+      "attribute-references": [
+        "SalesOrgAttribute"
+      ]
+    }
+  ]
+}
